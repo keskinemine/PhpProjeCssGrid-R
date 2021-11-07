@@ -1,0 +1,1448 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+  }
+  
+  body {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 115px 1fr auto;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    color: #646464;
+    font-size: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  #header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: 60px 40px 15px;
+    width: 95%;
+  }
+  #content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: 1fr;
+    background-color: white;
+    border: none;
+    width: 95%;
+  }
+  #footer {
+    grid-area: footer;
+    grid-template-rows: 210px 30px 30pxfr;
+    background-color: white;
+    border: none;
+    width: 95%;
+  }
+  /*
+  div {
+    background-color: goldenrod;
+    border: thin solid black;
+  }
+  */
+  .headerimg {
+    border: none;
+    background-color: #353745;
+    display: none;    
+  }
+  .uyeliknav {
+    border: none;
+    background-color: #4297c2;
+    width: 90%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center ;
+  }
+  .uyeliknav ul li a{
+    border: none;
+    background-color: #4297c2;
+  }
+  .mainav {
+    background-color: white;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .mainav ul {
+    width: 90%;
+    list-style: none;
+    float: right;
+    display: flex;
+    flex-wrap: wrap ;
+    text-align: center;
+    margin-right: 7px;
+  }
+  .mainav ul li a {
+    text-decoration: none;
+    color: #646464;
+    margin-left: 9px;
+    font-weight: bolder;
+    width: 95%;
+    flex-wrap: wrap;
+  }
+  .footercontainer {
+    background-color: #f9f9f9;
+    border: none;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    margin-top: 18px;
+  }
+  .footerblog {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    background-color: #f9f9f9;
+    border: none;
+  }
+  .footerblog h4 {
+    font-size: 16px;
+    height: 30px;
+    margin-bottom: 13px;
+    font-weight: bolder;
+    border-bottom: 1px dotted #cccccc;
+  }
+  .footerblog ul li {
+    height: 30px;
+    list-style: none;
+  }
+  .footerblog ul a {
+    text-decoration: none;
+    color: #646464;
+  }
+  .social li a .fa {
+    width: 20px;
+    height: 20px;
+    background-color: #808080;
+    color: white;
+    align-items: center;
+    padding-top: 2px;
+    padding-left: 3px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  .social li a .fa-facebook {
+    padding-left: 5px;
+    padding-top: 3px;
+  }
+  .copyright {
+    border: none;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .footerbankalar {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+  }
+  .footerbankalar img {
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .hakkimizdametni, .hakkimizdametnimain {
+    width: 95%; 
+  }
+  .hakkimizdametni h2 {
+    height: 30px;
+    width: 95%; 
+    background-color: #ff9900;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+  }
+  .hakkimazdaaltyazi {
+    height: 30px;
+    width: 95%; 
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dotted #cccccc;
+    margin-bottom: 8px;
+  }
+  .hakkimazdaaltyazisoru {
+    height: 50px;
+    width: 95%; 
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dotted #cccccc;
+    margin-bottom: 8px;
+  }
+  .bankablogcon {
+    display: flex;
+    flex-direction: column;
+  }
+  .bankablog {
+    width: 352px;
+    margin-bottom: 10px;
+    background-color: white;
+  }
+  .bankablog table tr:first-child th img{
+    margin-bottom: 7px;
+  }
+  .bankasatir td:first-child {
+    width: 80px;
+    font-weight: 900;
+  }
+  .bankasatir td:nth-child(3) {
+    width: 250px;
+  }
+  .havelebildirimcon{
+    display: block;
+    flex-direction: column;
+  }
+  .havalebildirimsag{
+    width: 80%;
+    display: block;
+    float: left;
+  }
+  .havalebildirimsol h3 , .havalebildirimsag h3{
+    height: 30px;
+    color: #FF9900;
+  }
+  .havalebildirimyazi{
+    height: 20px;
+    border-bottom: 1px dotted #cccccc;
+    line-height: 15px;
+  }
+  .havaleformu{
+    width: 95%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+  }
+  .havaleformu form input[type=text],input[type=email],input[type=number],input[type=password], textarea {
+    width: 97%;
+    padding: 5px 2px;
+    margin-bottom: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+  }
+  .havaleformu form select{
+    width: 95%;
+    padding: 5px 8px;
+    margin-top: 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #646464;
+  }
+  .havaleformu form input[type=submit]{
+    display: block;
+    background-color: #4CAF50;
+    color:white;
+    padding: 10px 18px;
+    margin: 2px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .havaleformu form input[type=submit]:hover{
+    background-color: #45a049;
+  }
+  .havaleresimblog{
+    display: flex;
+    height: 30px;
+    margin-top: 7px;
+    margin-bottom: 3px;
+  }
+  .havaleresimblog p{
+    padding-top: 3px;
+    font-weight: bold;
+  }
+  .havalebildirimsonuc{
+    width: 95%;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    border: none;
+    background-color: white;
+  }
+  .havalebildirimsonuc p{
+    display: flex;
+    justify-content: center ;
+  }
+  .havalebildirimsonuc p:nth-child(2){
+    font-weight: bolder;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  .havalebildirimsonuc p:last-child a{
+    font-weight: bolder;
+    text-decoration: none;
+    color: #646464;
+    margin-left: 7px;
+    margin-right: 5px;
+  }
+  .kargotakipbaslik{
+    padding-top: 20px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    height: 30px;
+  }
+  .havalebildirimsonuc p .kargoTakipInput{
+    width: 63%;
+    height: 35px;
+    padding: 3px 10px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .kargotakipButon{
+    background-color: #FF9900;
+    color:white;
+    height: 30px;
+    padding: 5px 50px;
+    border: 1px solid #CCCCCC;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .kargotakipButon:hover{
+    background-color: #CCCCCC;
+    color:black;
+    height: 30px;
+    padding: 5px 50px;
+    border: 1px solid black;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .iletisimformusonyazi{
+    padding-top: 18px;
+  }
+  .soruCevapAlan{
+    display: none;
+  }
+  .soruCevapcon{
+    background-color: white;
+    border: none;
+  }
+  .soruBaslikAlan{
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-bottom: 1px dotted #cccccc;
+    cursor: pointer;
+    padding-top: 10px;
+  }
+  .soruBaslikAlan:hover{
+    background-color: #F1F1F1;
+    cursor: pointer;
+  }
+  .soruCevapAlan{
+    background-color: white;
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .havaleformu form input[type=checkbox]{
+    width: 25px;
+    margin-top: 10px;
+  }
+  .havaleformu form label[for=sozlesmeOnay]{
+    width: 475;
+    margin-top: 10px;
+  }
+  .havaleformu form label[for=sozlesmeOnay] a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #646464;
+  }
+  .havaleformu form label[for=sifre] a{
+    float: right;
+    text-decoration: none;
+    color: #646464;
+    margin-right: 13px;
+  }
+  .uyelikbilgileri{
+    margin-bottom: 13px;
+  }
+  .reklamalani{
+    display: none;
+  }
+  .reklamalani p{
+    color: white;
+    font-size: 30px;  
+  }
+  .bilgilerimiGüncelleButonu{
+    background-color: #FF9900;
+    height: 40px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    margin-top: 13px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 13px;
+  }
+  .bilgilerimiGüncelleButonu:hover{
+    background-color: #CCCCCC;
+    color:black;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 13px;
+    margin-bottom: 13px;
+  }
+  .bilgilerimiGüncelleButonu a{ 
+    text-decoration: none;
+    color:#ffffff;
+  }
+  .hesabimnav{
+    width: 90%;
+  }
+  .hesabimnav ul{
+    width: 90%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;  
+  }
+  .hesabimnav ul li{
+    width: 19%;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .hesabimnav ul li a{
+    text-decoration: none;
+    color: #646464;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .hesabimnav ul li a:hover{
+    text-decoration: none;
+    color: #FF9900;
+    border-radius: 4px;
+  }
+  .hesabimadresekle{
+    height: 40px;
+    border: none;
+    background-color: rgb(168, 3, 3);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .hesabimadresekle p a{
+    text-decoration: none;
+    color: white;
+  }
+  .hesabimadresler{
+    width: 90%;
+    border: none;
+    background-color: white;
+    margin-top: 10px;
+  }
+  .hesabimadresler h3{
+    height: 40px;
+    color: #FF9900;
+  }
+  .hesabimadreslerbilgicon{
+    border: none;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+  }
+  .hesabimadreslerbilgisag{
+    border: none;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+  }
+  .hesabimadreslerbilgisol{
+    border: none;
+    padding: 10px 0px;
+    background-color: white;
+    width: 50%;
+  }
+  .hesabimadreslerbilgiyazi{
+    height: 120px;
+    padding-top: 10px;
+  }
+  .adresguncellesil{
+    border: none;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .adresguncellesil a{
+    text-decoration: none;
+    color: #646464;
+  }
+  .adresguncellesil a img{
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-right: 4px;
+  }
+  .hesabimsiparisler{
+    width: 25%;
+    height: 40px;
+    border: none;
+    background-color: rgb(168, 3, 3);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    color: white;
+    margin-top: 10px;
+  }
+  .hesabimsiparisler p:first-child{
+    width: 120px;
+  }
+  .hesabimsiparisler p:nth-child(2){
+    width: 75px;
+  }
+  .hesabimsiparisler p:nth-child(3){
+    width: 50px;
+  }
+  .hesabimsiparisler p:nth-child(4){
+    width: 365px;
+  }
+  .hesabimsiparisler p:nth-child(5){
+    width: 100px;
+  }
+  .hesabimsiparisler p:nth-child(6){
+    width: 50px;
+  }
+  .hesabimsiparisler p:nth-child(7){
+    width: 100px;
+  }
+  .hesabimsiparisler p:last-child{
+    width: 200px;
+  }
+  .hesabimsiparislersatirlar{
+    height: 80px;
+    border: none;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+  }
+  .hesabimsiparislersatirlar p:first-child{
+    width: 115px;
+    text-align: left;
+    margin-left: 7px;
+  }
+  .hesabimsiparislersatirlar p:nth-child(2){
+    width: 75px;
+  }
+  .hesabimsiparislersatirlar p:nth-child(2) img{
+    width: 60px;
+    margin-top: 8px;
+    height: 78px;
+  }
+  .hesabimsiparislersatirlar p:nth-child(3){
+    width: 50px;
+  }
+  .hesabimsiparislersatirlar p:nth-child(4){
+    width: 365px;
+  }
+  .hesabimsiparislersatirlar p:nth-child(5){
+    width: 100px;
+  }
+  .hesabimsiparislersatirlar p:nth-child(6){
+    width: 50px;
+  }
+  .hesabimsiparislersatirlar p:nth-child(7){
+    width: 100px;
+  }
+  .hesabimsiparislersatirlar p:last-child{
+    width: 200px;
+  }
+  .sayfalamaAlaniKapsayicisi{
+    background-color: white;
+    border: 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+  
+  }
+  .sayfalamaAlaniIciMetinAlaniKapsayicisi{
+    background-color: white;
+    border: 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+  
+  }
+  .sayfalamaAlaniIciNumaraAlaniKapsayicisi{
+    background-color: white;
+    border: 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+  
+  }
+  .sayfalamaAktif{
+    display: inline-block;
+    width: auto;
+    height: 30px;
+    padding-top: 1.5px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    margin: 0px 1px;
+    align-items: center;
+    background-color: #F6F6F6;
+    border: 1px solid #DADADA;
+    outline: 0;
+    color: #FF0000;
+    text-decoration: none;
+    font-weight: bold;  
+  }
+  .sayfalamaPasif{
+    display: inline-block;
+    width: auto;
+    height: 30px;
+    padding-top: 1.5px;
+    margin: 0px 1px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    align-items: center;
+    background-color: #F6F6F6;
+    border: 1px solid #DADADA;
+    outline: 0;
+    color: #646464;
+    text-decoration: none;
+  }
+  .sayfalamaPasif a:link,.sayfalamaPasif a:hover, .sayfalamaPasif a:visited{
+    color: #646464;
+    text-decoration: none;
+  }
+  .yorumyapformu{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    border: none;
+    height: 373px;
+  }
+  .yorumyapformu form input[type=submit]{
+    display: block;
+    background-color: #4CAF50;
+    color:white;
+    padding: 10px 18px;
+    margin: 2px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .yorumpuanlamaresimblog{
+    margin-top: 7px;
+    margin-right: 22px;
+    border: none;
+    background-color: white;
+    background-color: #f2f2f2;
+  }
+  .yorumpuanlamaresimblog img{
+    display: block;
+    margin-bottom: 3px;
+  }
+  .yorumpuanlamaresimblog input[type=radio]{
+    margin-left: 26px;
+  
+  }
+  .yorumpuanlamaresimblogcon{
+    background-color: #f2f2f2;
+    display: flex;
+    border: none;
+  
+  }
+  .hesabimyorum{
+    height: 40px;
+    border: none;
+    background-color: rgb(168, 3, 3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    margin-top: 10px;
+  }
+  .hesabimyorum p:first-child{
+    width: 100px;
+    padding-left: 5px;
+  }
+  .hesabimyorum p:last-child{
+    width: 300px;
+  }
+  .hesabimyorumlarsatirlar{
+    height: auto;
+    border: none;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px dotted #cccccc;
+    padding: 6px 0px;
+  }
+  .hesabimyorumlarsatirlar p img{
+    vertical-align: top;
+    padding-top: 3px;
+    margin-top: 3px;
+  }
+  .hesabimyorumlarsatirlar p:first-child{
+    width: 100px;
+    vertical-align: top;
+  }
+  .hesabimyorumlarsatirlar p:last-child{
+    width: 100%;
+    margin-left: 10px;
+  }
+  .hesabimfavoriler{
+    height: 40px;
+    border: none;
+    background-color: rgb(168, 3, 3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    margin-top: 10px;
+  }
+  .hesabimfavorilersatirlar{
+    height: 95px;
+    display: flex;
+    flex-direction: row;
+    float: left;
+    align-items: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px dotted #cccccc;
+  }
+  .hesabimfavorilersatirlar p a{
+    text-decoration: none;
+    color: #646464;
+  }
+  .hesabimfavoriler p:first-child, .hesabimfavorilersatirlar p:first-child {
+    width: 10%;
+
+  }
+  .hesabimfavorilersatirlar p:first-child img{
+    width: 10%;
+
+  }
+  .hesabimfavoriler p:nth-child(2), .hesabimfavorilersatirlar p:nth-child(2){
+    width: 10%;
+  }
+  .ayakkabilarcon{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+  }
+  .ayakkabilarsol{
+    display: flex;
+    flex-direction: column;
+  }
+  .ayakkabilarsolmenuler{
+    width: 100%;
+  }
+  .ayakkabilarsolmenuler h4 {
+    background-color: #F1F1F1;
+    padding-left: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+  }
+  .ayakkabilarsolmenuler p{
+    height: 30px;
+    display: block;
+    padding-left: 5px;
+  }
+  .ayakkabilarsolmenuler p a{
+    text-decoration: none ;
+    font-weight: bold;
+  }
+  .ayakkabilarsolreklamlar{
+    display: none;
+  }
+  .ayakkabilarsag{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+  .ayakkabiaramaalani{
+    display: block;
+    width: 90%;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: left;
+    background-color: white;
+  }
+  .ayakkabiaramaalani input[type=submit]{
+    display: flex;
+    float: right;
+    width: 15%;
+    height: 27px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #646464;
+    background: url(../resimler/AraButonuIciBuyuteci.png);
+    background-repeat: no-repeat;
+    background-position: center left 10px;
+    border-radius: 4px;
+  }
+  .ayakkabiaramaalani input[type=submit]:hover{
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .ayakkabiaramaalani input[type=text]{
+    display: flex;
+    float: left;
+    border: 1px solid #646464;
+    width: 85%;
+    height: 27px;
+    text-align: left;
+    border-radius: 4px;
+  }
+  .ayakkabiresimbilgiblogcon{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .ayakkabiresimbilgiblog{
+    width: 45%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .ayakkabiresimbilgiresim{
+    width: 30%;
+    height: 50%;
+  }
+  .ayakkabiresimbilgiblog .ayakkabiresimbilgisatir img{
+    text-align: center;
+    width: 83%;
+  }
+  .ayakkabiresimbilgisatir{
+    text-align: center;
+  }
+  .ayakkabiresimbilgisatirurunTuru{
+    color: #FF9900;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .ayakkabiresimbilgisatirurunAdi{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    height: 30px;
+    border: none;
+    background-color: white;
+  }
+  .ayakkabiresimbilgisatirurunAdi a{
+    line-height: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #646464;
+    overflow: hidden;
+    text-align: center;
+  }
+  .ayakkabiresimbilgisatirurunFiyat{
+    color: rgb(43, 118, 231);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .urundetaycon{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+  .urundetaysol{
+    width: 95%;
+  }
+
+  #buyukResim{
+    border: 1px solid #CCCCCC;
+    width: 40%;
+    height: 50%;
+    display: flex;
+    margin-left: 80px;
+  }
+  .urundetaydortluresimblog{
+    background-color: white;
+    border: none;
+    display: flex;
+  }
+  .urundetaydortluresimblog img{
+    width: 78px;
+    height: 104px;
+    border: 1px solid #CCCCCC;
+  }
+  .urundetaydortluresimblog img:nth-child(2){
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .urundetaydortluresimblog img:nth-child(3){
+    margin-right: 8px;
+  }
+  .urundetaysolreklam{
+    display: none;
+  }
+  .urundetaysag{
+    width: 95%;
+    margin-top: 8px;
+  }
+  .urundetaysag > h3{
+    height: 30px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #F1F1F1;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .urundetaysagfavsepet{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .urundetayfavlink{
+    background-color: white;
+    border: none;
+    height: 45px;
+    display: flex;
+    align-items: center;
+  }
+  .urundetayfavlink a {
+    color: rgb(231, 14, 14);
+    margin-right: 10px;
+  }
+  .urundetayfavlink a img{
+    width: 22px;
+    height: 22px;
+    margin-top: 5px;
+  }
+  .urundetaysepetbutonu{
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    width: 100%;
+  }
+  .urundetaysepetbutonu input[type=submit]{
+    height: 30px;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #FF9900;
+    color: white;
+    border: 1px solid rgb(255, 115, 0);
+    font-weight: bold;
+  }
+  .urundetaysepetbutonu input[type=submit]:hover{
+    height: 30px;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #CCCCCC;
+    color: white;
+    border: 1px solid rgb(75, 75, 75);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .varyantvefiyat{
+    width: 95%;
+    background-color: white;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    margin-bottom: 7px;
+  }
+  .varyantvefiyat select{
+    width: 80%;
+  }
+  .varyantvefiyat p{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+  }
+  .urundetaykargoodemecon{
+    background-color: white;
+    border: none;
+  }
+  .urundetaykargoodemeblog{
+    height: 30px;
+    background-color: white;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .urundetaykargoodemeblog img{
+    margin-right: 10px;
+  }
+  .urundetaysagaciklamaveyorum{
+    background-color: white;
+    border: none;
+  }
+  .urundetaysagaciklamaveyorum > h4{
+    background-color: #FF9900;
+    height: 30px;
+    color: white;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    margin-top: 5px;
+  }
+  .urundetayyorumlar{
+    width: 100%;
+    height: auto;
+    max-height: 510px;
+    overflow-y: scroll;
+    border: none;
+    background-color: white;
+  }
+  .urundetayyorumlar ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    height: 30px;
+  }
+  .urundetayyorumlar ul li:first-child{
+    width: 50%;
+    margin-right: 10px;
+  }
+  .urundetayyorumlar ul li:nth-child(2){
+    width: 20%;
+    margin-right: 10px;
+  }
+  .urundetayyorumlar ul li:last-child{
+    width: 30%;
+    text-align: right;
+    margin-right: 10px;
+  }
+  .urundetayyorumsatir{
+    border-bottom: 1px dotted #cccccc;
+    padding-bottom: 5px;
+    margin-bottom: 7px;
+  }
+  .alisverissepeticon{
+    border: none;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  .alisverissepetisol{
+    border: none;
+    background-color: white;
+    width: 60%;
+  }
+  .alisverissepetisag{
+    border: none;
+    background-color: white;
+    width: 250px;
+    margin-left: 15px;
+    text-align: right;
+  }
+  .alisverissepetisol h3 , .alisverissepetisag h3{
+    height: 40px;
+    color: #FF9900;
+  }
+  .alisverissepetiurunlercon{
+    border: none;
+    background-color: white;
+    margin-top: 5px;
+  }
+  .alisverissepetiurunlerblog{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    align-items: center;
+    border: none;
+    border-bottom: 1px dotted #cccccc;
+  }
+  .alisverissepetiurunlerblog > p:first-child{
+    width: 90px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .alisverissepetiurunlerblog > p:first-child img{
+    width: 60px;
+    height: 80px;
+  }
+  .alisverissepetiurunlerblog > p:nth-child(2){
+    width: 20px;
+    margin-top: 7px;
+  }
+  .alisverissepetiurunlerblog > p:nth-child(3){
+    padding-left: 13px;
+    width: 490px;
+  }
+  .alisverissepetiurunlerblog > p:nth-child(4), .alisverissepetiurunlerblog p:nth-child(6){
+    width: 30px;
+    margin-top: 7px;
+  }
+  
+  .alisverissepetiurunlerblog > p:nth-child(5){
+    width: 30px;
+    padding-right: 8px;
+    text-align: center;
+  }
+  .alisverissepetiurunlerblog >  p:nth-child(7){
+    width: 110px;
+    text-align: right;
+    padding-right: 7px;
+  }
+  .alisverissepetisag > p span{
+    color: #FF9900;
+    font-weight: bold;
+  }
+  .alisverissepetisagodeme{
+    margin-top: 5px;
+    background-color: white;
+    border: none;
+  }
+  .alisverissepetisagodeme > p:nth-child(2) {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .alisverissepetisagodeme > p:nth-child(3) {
+    height: 45px;
+    background-color: #FF9900;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 70px;
+    margin-top: 8px;
+    border-radius: 4px;
+  }
+  .alisverissepetisagodeme > p:nth-child(3):hover {
+    height: 45px;
+    background-color: #fdc959;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 70px;
+    margin-top: 8px;
+    border-radius: 4px;
+  }
+  .alisverissepetisagodeme > p:nth-child(3) a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  .alisverissepetisagodeme > p:nth-child(3) a img{
+    margin-top: 5px;
+    margin-right: 7px;
+  }
+  .alisverissepetikargoodemeadresekleme a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #646464;
+  }
+  .alisverissepetiadressecekle{
+    background-color: #CCCCCC;
+    border: none;
+    font-weight: bold;
+    height: 40px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .alisverissepetiadressecekle a{
+    text-decoration: none;
+    color: #ff5100;
+  }
+  .alisverissepetiadresblog{
+    border: none;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+  }
+  .alisverissepetiadresblog p{
+    margin-bottom: 7px;
+    padding-bottom: 2px;
+    border-bottom: 1px dotted #cccccc;
+  }
+  .alisverissepetiadresblog p:first-child{
+    width: 25px;
+  }
+  .alisverissepetiadresblog p:nth-child(2){
+    width: 775px;
+  }
+  .alisverissepetikargosatirlari{
+    border: none;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
+  .alisverissepetikargosatirlari p:first-child{
+    width: 30px;
+  }
+  .alisverissepetikargosatirlari p:last-child{
+    width: 230px;
+  }
+  .alisverisitamambutonu{
+    width: 100%;
+    height: 45px;
+    padding: 10px 0px 10px 0px;
+    background-color: #FF9900;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .alisverisitamambutonu:hover{
+    background-color: #fdc959;
+    cursor: pointer;
+  }
+  .kredikarticon{
+    border: none;
+    background-color: white;
+  }
+  .odemesecimi{
+    border: none;
+    background-color: white;
+    display: flex;
+    margin: 10px 0px;
+    align-items: center;
+    height: 30px;
+  }
+  .odemesecimi p{
+    width: 400px;
+  }
+  .odemesecimi p img{
+    width: 20px;
+    margin-right: 10px;
+    margin-left: 7px;
+  }
+  .bankasecimi{
+    border: none;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5px;
+    margin-top: 10px;
+    height: 30px;
+  }
+  .taksitsecimi{
+    background-color: white;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    padding-right: 5px;
+    height: 30px;
+  }
+  .taksitsecimi p:first-child{
+    width: 400px;
+  }
+  .taksitsecimi p:nth-child(2){
+    width: 200px;
+    text-align: right;
+  }
+  .taksitsecimi p:last-child{
+    width: 200px;
+    text-align: right;
+  }
+  .taksitsecimi p:first-child input[type=radio]{
+    width: 25px;
+  }
+  .bankahavalesicon{
+    border: none;
+    background-color: white;
+    display: none;
+  }
+  .kredikartibilgilericon{
+    margin-top: 5px;
+    background-color: white;
+    border: none;
+  }
+  .kredikartibilgileriblog{
+    display: flex;
+    flex-direction: row;
+    border: none;
+    background-color: white;
+    height: 30px;
+    margin-top: 5px;
+    align-items: center;
+  }
+  .kredikartibilgileriblog p{
+    width: 250px;
+    margin-top: 10px;
+  }
+  .kredikartibilgileriblog:first-child input[type=text]{ 
+    width: 550px;
+    height: 30px;
+  }
+  .kredikartibilgileriblog select{
+    width: 100px;
+    margin-right: 10px;
+    height: 30px;
+  }
+  .kredikartibilgileriblog:nth-child(3) > input[type=radio]{
+    margin-right: 4px; 
+  }
+  .kartturumaster{
+    margin-left: 8px;
+  }
+  .kredikartibilgileriblog:nth-child(4) input[type=text]{ 
+    width: 130px;
+    height: 30px;
+  }
+  .kredikartibilgilericon input[type=submit]{
+    margin-left: 250px;
+    width: 130px;
+    display: block;
+    background-color: #4CAF50;
+    color:white;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+  .kredikartibilgilericon input[type=submit]:hover{
+    background-color: #2b922e;
+  }
+  .anasayfabannerlari{
+    display: none;
+  }
+  .enyeniurunbaslik{
+    height: 35px;
+    background-color: #FF9900;
+    font-size: 14px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    color: white;
+    font-weight: bold;
+  }
+  .enpopulerurunbaslik{
+    height: 35px;
+    background-color: #FF9900;
+    font-size: 14px;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    padding-left: 5px;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .enyeniurunlercon{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .enyeniurunlerblog{
+    width: 47%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .enyeniurunlerblog table tr th a img{
+    width: 40%;
+    width: 50%;
+  }
+  .anasayfateslimatiadecon{
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .anasayfateslimatiadeblog{
+    width: 45%;
+    text-align: center;
+  }
+  .anasayfateslimatiadeblog img{
+    width: 15%;
+
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
